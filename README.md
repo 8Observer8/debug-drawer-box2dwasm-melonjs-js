@@ -2,7 +2,6 @@ Buy me a chicory coffee: https://boosty.to/ivan_8observer8/donate This service s
 
 Playgrounds:
 
-- PlayCode: https://playcode.io/1536493
 - Plunker: https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview
 - Glitch: https://glitch.com/edit/#!/sudsy-outstanding-marble
 
