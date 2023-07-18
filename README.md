@@ -6,6 +6,8 @@ Playgrounds:
 - Plunker: https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview
 - Glitch: https://glitch.com/edit/#!/sudsy-outstanding-marble
 
+[gif-animation](https://user-images.githubusercontent.com/3908473/254252191-646cb808-909c-4a1a-9312-b5454f6f2847.gif)
+
 Instruction for building and running the project in debug and release using Rollup:
 
 - Install these packages globally with the command:
