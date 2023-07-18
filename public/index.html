@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The debug drawer of Box2D-WASM colliders using Melon.js and JavaScript</title>
+</head>
+
+<body style="caret-color: transparent;">
+    <p>Buy me a chicory coffee: <a href="https://boosty.to/ivan_8observer8/donate">https://boosty.to/ivan_8observer8/donate</a> This service supports PayPal.</p>
+
+    <ul>
+        <li>PlayCode: <a href="https://playcode.io/1536493">https://playcode.io/1536493</a>
+        <li>Plunker: <a href="https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview">https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview</a>
+        <li>Glitch: <a href="https://glitch.com/edit/#!/sudsy-outstanding-marble">https://glitch.com/edit/#!/sudsy-outstanding-marble</a>
+    </ul>
+
+    <!-- Since import maps are not yet supported by all browsers, its is
+        necessary to add the polyfill es-module-shims.js -->
+    <script async src="https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "box2d-wasm": "https://8observer8.github.io/lib/box2d-wasm-7.0.0-box2d-2.4.1/box2d-wasm.min.js",
+                "melonjs": "https://cdn.jsdelivr.net/npm/melonjs@15.6.0/+esm"
+            }
+        }
+    </script>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
