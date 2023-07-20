@@ -45,7 +45,7 @@ export default class DebugDrawer {
     drawLines(vertices, color) {
         this.renderer.setLineWidth(3);
         this.renderer.beginPath();
-        const c = new me.Color(color.r * 255, color.g * 255, color.b * 255, 1);
+        const c = new me.Color().setFloat(color.r, color.g, color.b, 1);
         this.renderer.setColor(c);
         this.renderer.moveTo(vertices[0].x * this.pixelsPerMeter, vertices[0].y * this.pixelsPerMeter);
         this.renderer.lineTo(vertices[1].x * this.pixelsPerMeter, vertices[1].y * this.pixelsPerMeter);
