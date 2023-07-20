@@ -31,10 +31,6 @@ me.device.onReady(
                         b2World
                     } = box2d;
 
-                    this.currentTime = 0;
-                    this.dt = 0;
-                    this.lastTime = Date.now();
-
                     this.world = new b2World();
                     const gravity = new b2Vec2(0, 9.8);
                     this.world.SetGravity(gravity);
