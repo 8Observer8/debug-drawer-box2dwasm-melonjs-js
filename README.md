@@ -2,6 +2,7 @@ Buy me a chicory coffee: https://boosty.to/ivan_8observer8/donate This service s
 
 Playgrounds:
 
+- Replit: https://replit.com/@8Observer8/Debug-drawer-for-Box2D-WASM-using-Melonjs-and-JS
 - Plunker: https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview
 - Glitch: https://glitch.com/edit/#!/sudsy-outstanding-marble
 
