@@ -34,7 +34,12 @@ export default class DebugDrawer {
                 self.drawLines(vertices, color);
             },
             DrawCircle(center_p, radius, color_p) {},
-            DrawSolidCircle(center_p, radius, axis_p, color_p) {},
+            DrawSolidCircle(center_p, radius, axis_p, color_p) {
+                const center = wrapPointer(center_p, b2Vec2);
+                const color = wrapPointer(color_p, b2Color);
+                self.drawCircle(center.x * self.pixelsPerMeter, center.y * self.pixelsPerMeter,
+                    radius * self.pixelsPerMeter, color);
+            },
             DrawTransform(transform_p) {},
             DrawPoint(vertex_p, sizeMetres, color_p) {}
         });
@@ -52,6 +57,30 @@ export default class DebugDrawer {
         this.renderer.lineTo(vertices[2].x * this.pixelsPerMeter, vertices[2].y * this.pixelsPerMeter);
         this.renderer.lineTo(vertices[3].x * this.pixelsPerMeter, vertices[3].y * this.pixelsPerMeter);
         this.renderer.lineTo(vertices[0].x * this.pixelsPerMeter, vertices[0].y * this.pixelsPerMeter);
+        this.renderer.stroke();
+    }
+
+    drawCircle(x0, y0, radius, color) {
+        let angle = 0;
+        const angleStep = 20;
+        const n = 360 / angleStep;
+
+        this.renderer.setLineWidth(3);
+        this.renderer.beginPath();
+        const c = new me.Color().setFloat(color.r, color.g, color.b, 1);
+        this.renderer.setColor(c);
+
+        let x = radius * Math.cos(angle * Math.PI / 180);
+        let y = radius * Math.sin(angle * Math.PI / 180);
+        this.renderer.moveTo(x0 + x, y0 + y);
+        angle += angleStep;
+
+        for (let i = 0; i < n; i++) {
+            x = radius * Math.cos(angle * Math.PI / 180);
+            y = radius * Math.sin(angle * Math.PI / 180);
+            this.renderer.lineTo(x0 + x, y0 + y);
+            angle += angleStep;
+        }
         this.renderer.stroke();
     }
 

@@ -26,6 +26,7 @@ me.device.onReady(
                     const {
                         b2_dynamicBody,
                         b2BodyDef,
+                        b2CircleShape,
                         b2PolygonShape,
                         b2Vec2,
                         b2World
@@ -57,6 +58,26 @@ me.device.onReady(
                     const boxShape = new b2PolygonShape();
                     boxShape.SetAsBox(30 / this.pixelsPerMeter, 30 / this.pixelsPerMeter);
                     boxBody.CreateFixture(boxShape, 1);
+
+                    // Circle
+                    const circleBodyDef = new b2BodyDef();
+                    circleBodyDef.type = b2_dynamicBody;
+                    circleBodyDef.position = new b2Vec2(200 / this.pixelsPerMeter, 50 / this.pixelsPerMeter);
+                    const circleRigidBody = this.world.CreateBody(circleBodyDef);
+                    const circleShape = new b2CircleShape();
+                    circleShape.m_radius = 20 / this.pixelsPerMeter;
+                    const circleFixture = circleRigidBody.CreateFixture(circleShape, 1);
+                    circleFixture.SetRestitution(0.5);
+
+                    // Platform
+                    const platformBodyDef = new b2BodyDef();
+                    platformBodyDef.set_position(new b2Vec2(220 / this.pixelsPerMeter,
+                        200 / this.pixelsPerMeter));
+                    platformBodyDef.angle = -20 * Math.PI / 180;
+                    const platformBody = this.world.CreateBody(platformBodyDef);
+                    const platformShape = new b2PolygonShape();
+                    platformShape.SetAsBox(50 / this.pixelsPerMeter, 5 / this.pixelsPerMeter);
+                    platformBody.CreateFixture(platformShape, 0);
                 }
 
                 update(dt) {
