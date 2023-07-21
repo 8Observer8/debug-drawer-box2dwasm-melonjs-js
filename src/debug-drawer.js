@@ -83,8 +83,4 @@ export default class DebugDrawer {
         }
         this.renderer.stroke();
     }
-
-    clear() {
-        this.lines.clear();
-    }
 }
