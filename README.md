@@ -1,5 +1,7 @@
 Buy me a chicory coffee: https://boosty.to/ivan_8observer8/donate This service supports PayPal.
 
+Live demo: https://8observer8.github.io/webgl10-js/debug-drawer-box2dwasm-melonjs-js/
+
 Playgrounds:
 
 - Replit: https://replit.com/@8Observer8/Debug-drawer-for-Box2D-WASM-using-Melonjs-and-JS
