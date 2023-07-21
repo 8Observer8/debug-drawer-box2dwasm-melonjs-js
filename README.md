@@ -6,6 +6,8 @@ Playgrounds:
 - Plunker: https://plnkr.co/edit/FPE7qRMIWhAhK5M1?preview
 - Glitch: https://glitch.com/edit/#!/sudsy-outstanding-marble
 
+Topic and discussions: [Melon.js topic](https://melonjs.discourse.group/t/the-debug-drawer-of-box2d-wasm-colliders-using-melon-js-and-javascript/56), [Melon.js discussion](https://github.com/melonjs/melonJS/discussions/1192), [Box2D-WASM discussion](https://github.com/Birch-san/box2d-wasm/discussions/67)
+
 ![debug-drawer-box2dwasm-melonjs-js](https://github.com/8Observer8/debug-drawer-box2dwasm-melonjs-js/assets/3908473/e458351b-9f4e-4cf1-b6cc-10f0463ea876)
 
 Instruction for building and running the project in debug and release using Rollup:
